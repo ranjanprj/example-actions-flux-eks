@@ -39,9 +39,10 @@ jobs:
     - name: Build and tag the image
       run: |
         # Build and tag the image
+        cd app
         docker build \
           -t $CONTAINER_IMAGE \
-          -t $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$CONTAINER_IMAGE -f ./app/Dockerfile
+          -t $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$CONTAINER_IMAGE .
            
     # Add additional steps here like scanning of image
 
