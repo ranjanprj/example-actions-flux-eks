@@ -8,8 +8,8 @@ metadata:
 spec:
   replicas: 1
   selector:
-      matchLabels:
-        app: aws-example-octodex
+    matchLabels:
+      app: aws-example-octodex
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -23,7 +23,7 @@ spec:
       containers:
       - name: aws-example-octodex
         # image: 00000000000000.dkr.ecr.my-region.amazonaws.com/example-eks:tag
-        image: 827944513555.dkr.ecr.us-east-2.amazonaws.com/example-eks:3e2b2e43a830dbbe3ff8350805fdb09234c357af
+        image: 827944513555.dkr.ecr.us-east-2.amazonaws.com/example-eks:4b7ab2b6b96871d453318ddcbe64f16f39ce2ebf
         ports:
         - containerPort: 5000
         resources:
