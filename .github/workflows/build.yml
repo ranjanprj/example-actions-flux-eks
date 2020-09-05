@@ -48,7 +48,7 @@ jobs:
         IMAGE_TAG: latest
       run: |
         # Build a docker container and push it to ECR 
-        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG ./app
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$CONTAINER_IMAGE ./app
         echo "Pushing image to ECR..."
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$CONTAINER_IMAGE
         echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$CONTAINER_IMAGE"
